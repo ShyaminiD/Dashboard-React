@@ -184,20 +184,20 @@ export function Dashboardcomponent1() {
         <h2>Dashboard</h2>
       </div>
 
-      <Grid container spacing={2} style={{ margin: "10px" }}>
-        <Grid xs={12} sm={6} lg={3} style={styles}>
+      <Grid container spacing={2} style={{ margin: "10px",gap:"10px" }}>
+        <Grid item xs={12} sm={6} lg={2} style={styles}>
           <p>EARNINGS(MONTHLY)</p>
           <p>$40,000</p>
         </Grid>
-        <Grid xs={12} sm={6} lg={3} style={styles}>
+        <Grid item xs={12} sm={6} lg={2} style={styles}>
           <p>EARNINGS(MONTHLY)</p>
           <p>$40,000</p>
         </Grid>
-        <Grid xs={12} sm={6} lg={3} style={styles}>
+        <Grid item xs={12} sm={6} lg={2} style={styles}>
           <p>EARNINGS(MONTHLY)</p>
           <p>$40,000</p>
         </Grid>
-        <Grid xs={12} sm={6} lg={3} style={styles}>
+        <Grid item xs={12} sm={6} lg={2} style={styles}>
           <p>EARNINGS(MONTHLY)</p>
           <p>$40,000</p>
         </Grid>

@@ -40,7 +40,7 @@ export function Dashboard1() {
   return (
     <div style={styles}>
       <div style={styles}>
-        <Grid xs={12} md={6} lg={3}>
+        <Grid xs={12} md={6} lg={2}>
           Welcome to dashboard
         </Grid>
         <Grid xs={12} md={6} lg={3}>
