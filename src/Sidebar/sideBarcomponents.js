@@ -12,7 +12,6 @@ import TableChartIcon from "@mui/icons-material/TableChart";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import Grid from "@mui/material/Grid";
 
 const sideBarcomponents = [
   {
@@ -170,38 +169,4 @@ export function Sidebar() {
   );
 }
 
-export function Dashboardcomponent1() {
-  const styles = {
-    backgroundColor: "whitesmoke",
-    borderRadius: "5px",
-    padding: "10px",
-    borderLeft: "10px solid red",
-    fontSize: "10px",
-  };
-  return (
-    <div>
-      <div style={{ margin: "10px" }}>
-        <h2>Dashboard</h2>
-      </div>
 
-      <Grid container spacing={2} style={{ margin: "10px",gap:"10px" }}>
-        <Grid item xs={12} sm={6} lg={2} style={styles}>
-          <p>EARNINGS(MONTHLY)</p>
-          <p>$40,000</p>
-        </Grid>
-        <Grid item xs={12} sm={6} lg={2} style={styles}>
-          <p>EARNINGS(MONTHLY)</p>
-          <p>$40,000</p>
-        </Grid>
-        <Grid item xs={12} sm={6} lg={2} style={styles}>
-          <p>EARNINGS(MONTHLY)</p>
-          <p>$40,000</p>
-        </Grid>
-        <Grid item xs={12} sm={6} lg={2} style={styles}>
-          <p>EARNINGS(MONTHLY)</p>
-          <p>$40,000</p>
-        </Grid>
-      </Grid>
-    </div>
-  );
-}

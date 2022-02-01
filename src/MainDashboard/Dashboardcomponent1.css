@@ -1,0 +1,14 @@
+.statprogress{
+    width: 100px;
+    background-color: #dfe3e7;
+    border-radius: 3px;
+    overflow: hidden;
+  height:8px;
+  }
+
+  .statprogressbar{
+    width: 50px;
+    height:8px;
+    background-color: #36b9cc;
+  }
+

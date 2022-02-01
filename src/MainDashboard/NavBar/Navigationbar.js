@@ -2,13 +2,11 @@ import "./Navigationbar.css";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import { FaSearch } from "react-icons/fa";
-
 import IconButton from "@mui/material/IconButton";
 import Box from "@mui/material/Box";
 import Badge from "@mui/material/Badge";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
-
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";

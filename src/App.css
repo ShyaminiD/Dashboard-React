@@ -3,12 +3,13 @@
     flex-direction: row;
     margin:0px;
     padding:0px;
-    overflow:hidden;
+    
+    
    
 }
 
 .second-Container{
-    height:100vh;
+   
     background-color:aqua;
 
 }
