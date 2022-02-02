@@ -108,7 +108,7 @@ const maincontainer = {
   borderRadius: "5px",
   overflow: "hidden",
 };
-export function ProjectProgressBox() {
+export default function ProjectProgressBox() {
   return (
     <Grid lg={6} xs={12} style={maincontainer}>
    

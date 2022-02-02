@@ -1,7 +1,5 @@
 
-.sidebar{
-    background-color: #663fef;
-   }
+
     .sidebarList{
       list-style: none;
       margin:0px;
@@ -21,14 +19,8 @@
     
    
   }
-  .sidebar-emoji{
-    display:flex;
-    flex-direction: row;
-    padding-top: 10px;
-    padding-bottom:10px;
-    justify-content: space-evenly;
-    
-  }
+
+ 
   .sidebar-menu{
     color:white;
     font-size:10px;
@@ -38,10 +30,7 @@
     flex-direction: row;
     justify-content: space-between;
   }
-  .sidebar-submenu1{
-    display:flex;
-    flex-direction: row;
-   }
+ 
   .sidebar-title{
     font-size:10px;
   }

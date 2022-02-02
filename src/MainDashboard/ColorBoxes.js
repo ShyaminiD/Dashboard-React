@@ -49,7 +49,7 @@ const colorforBoxes = [
 
 const useStyles = makeStyles({
   colorboxStyles: {
-    backgroundColor: ({ boxcolor }) => (console.log(boxcolor), boxcolor),
+    backgroundColor: ({ boxcolor }) => (boxcolor),
     borderRadius: "5px",
     padding: "15px",
     display: "flex",
@@ -74,13 +74,14 @@ const maincontainer = {
   backgroundColor: "#fff",
   borderRadius: "5px",
   overflow: "hidden",
-  padding: "10px",
+  
+  gap:"26px",
 };
 function ColorBoxes({ colorname, colorcode, boxcolor, paracolorname }) {
   console.log(boxcolor);
   const classes = useStyles({ boxcolor, paracolorname });
   return (
-    <Grid lg={5.5} xs={12}>
+    <Grid lg={5.7} xs={12}>
       <div className={classes.colorboxStyles}>
         <p className={classes.colornameStyle}>{colorname}</p>
         <p className={classes.colorcodeStyle}>{colorcode}</p>
@@ -89,9 +90,12 @@ function ColorBoxes({ colorname, colorcode, boxcolor, paracolorname }) {
   );
 }
 
-export function ColorBoxesGrid() {
+
+
+export default function ColorBoxesGrid() {
   return (
-    <Grid lg={6} xs={12} style={maincontainer}>
+    
+    <Grid container lg={6} xs={12} style={maincontainer}>
       {colorforBoxes.map((cb) => (
         <ColorBoxes
           colorname={cb.colorName}
@@ -103,3 +107,4 @@ export function ColorBoxesGrid() {
     </Grid>
   );
 }
+

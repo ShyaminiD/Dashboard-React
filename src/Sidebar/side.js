@@ -104,54 +104,12 @@ function SidemenuOptions({ ptitle, picon, parrow, plink, pline, psubheading }) {
 
 export function Sidebar() {
   const [setWidth, setWidthSidebar] = useState(180);
-  const [setDisplay, setDisplayFlex] = useState("row");
-  const sideBarStyles = {
-    width: setWidth,
-    backgroundColor: "#4e73df",
-    height: "100vh",
-  };
-  const sidebaremojiStyles = {
-    display: "flex",
-    flexDirection: setDisplay,
-    paddingTop: "10px",
-    paddingBottom: "10px",
-    justifyContent: "space-evenly",
-    borderBottom: "1px solid red",
-  };
-  const sidebarSubmenu1 = {
-    padding: "5px",
-    paddingLeft: "0px",
-    borderBottom: "1px solid red",
-  };
-  const iconButtonStyle = {
-    padding: "0px",
-    color: "white",
-    display: "flex",
-    flexDirection: setDisplay,
-    justifyContent: "flex-start",
-  };
-  const iconButtonStyle1 = {
-    padding: "0px",
-    color: "white",
-    transform: "scale(0.6)",
-    alignItems: "center",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  };
-
-  const iconButtonStyle2 = {
-    color: "white",
-    fontSize: "10px",
-    fontWeight: "bold",
-    padding: "0px",
-  };
-
+  const styles = { width: setWidth };
   return (
     <Router>
-      <div style={sideBarStyles}>
-        <div style={{ margin: "10px" }}>
-          <div style={sidebaremojiStyles}>
+      <div className="sidebar" style={styles}>
+        <div style={{ marginLeft: "12px" }}>
+          <div className="sidebar-emoji">
             <div className="arrow">
               <EmojiEmotionsIcon style={{ color: "white", fontSize: "30px" }} />
             </div>
@@ -159,23 +117,33 @@ export function Sidebar() {
               className="arrow"
               style={{ color: "white", fontWeight: "bold", fontSize: "12px" }}
             >
-              <p style={{ marginBottom: "0px" }}>
+              <p>
                 SB ADMIN <sup>2</sup>
               </p>
             </div>
           </div>
-          <Link to="/dashboard">
-            <div style={sidebarSubmenu1}>
-              <IconButton style={iconButtonStyle}>
-                <div style={iconButtonStyle1}>
-                  <SpeedIcon />
-                </div>
-                <div style={iconButtonStyle2}>Dashboard</div>
-              </IconButton>
-            </div>
-          </Link>
 
-          {/* <ul className="sidebarList">
+          <div class="line"></div>
+          <div className="sidebar-submenu1">
+            <Link to="/dashboard">
+              <IconButton style={{ color: "white", transform: "scale(0.6)" }}>
+                <SpeedIcon />
+              </IconButton>
+
+              <IconButton
+                style={{
+                  color: "white",
+                  fontSize: "10px",
+                  fontWeight: "bold",
+                  padding: "0px",
+                }}
+              >
+                Dashboard
+              </IconButton>
+            </Link>
+          </div>
+          <div className="line"></div>
+          <ul className="sidebarList">
             <li className="sidebarList-row">
               {sideBarcomponents.map((m) => (
                 <SidemenuOptions
@@ -189,16 +157,13 @@ export function Sidebar() {
               ))}
             </li>
           </ul>
-          <div class="line"></div> */}
+          <div class="line"></div>
 
           <div className="navigating-arrow">
             <IconButton
               onClick={() => {
                 console.log(setWidth);
                 setWidth === 90 ? setWidthSidebar(180) : setWidthSidebar(90);
-                setWidth === 90
-                  ? setDisplayFlex("row")
-                  : setDisplayFlex("column");
               }}
             >
               {setWidth === 180 ? (
@@ -215,6 +180,25 @@ export function Sidebar() {
           <MainDashboard />
         </Route>
       </Switch>
+      {/* <Switch>
+      <Route path="/components">
+          components
+        </Route>
+
+        <Route path="/utilties">
+          Utilities
+        </Route>
+        <Route path="/pages">
+          Pages
+        </Route>
+        <Route path="/charts">
+          Charts
+        </Route>
+        <Route path="/tables">
+          tables
+        </Route>
+      </Switch> 
+      */}
     </Router>
   );
 }

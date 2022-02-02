@@ -5,12 +5,13 @@ import AssignmentIcon from "@mui/icons-material/Assignment";
 import QuestionAnswerIcon from "@mui/icons-material/QuestionAnswer";
 import "./Dashboardcomponent1.css";
 import makeStyles from "@mui/styles/makeStyles";
+import Box from "@mui/material/Box";
 import Linechart from "./Linechart";
 import DoughnutChart from "./Doughnut";
 import Illustrations from "./Illustrations";
-import { ProjectProgressBox } from "./ProjectsProgress";
-import { ColorBoxesGrid } from "./ColorBoxes";
-import Box from "@mui/material/Box";
+import ProjectProgressBox from "./ProjectsProgress";
+import ColorBoxesGrid from "./ColorBoxes";
+import DevelopmentApproach from "./DevelopmentApproach";
 
 import { Chart, ArcElement } from "chart.js";
 
@@ -97,23 +98,7 @@ const useStyles = makeStyles({
     justifyContent: "flex-end",
   },
   headingsIcon: {
-    color: "grey",
-    color: "#cdd4da",
-  },
-  doughNutHeader: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-between",
-  },
-  doughNutBox: {
-    height: "350px",
-    width: "400px",
-    padding: "10px",
-  },
-  LinechartBox: {
-    width: "650px",
-    height: "400px",
-    padding: "10px",
+    color: "#dddfeb",
   },
 });
 
@@ -138,8 +123,6 @@ export function Stats({ v1, v2, v3, v4, tcolor }) {
 }
 
 export function Dashboardcomponent1() {
-  const classes = useStyles();
-
   return (
     <div>
       <div style={{ margin: "10px" }}>
@@ -158,13 +141,20 @@ export function Dashboardcomponent1() {
         ))}
         <Linechart />
         <DoughnutChart />
-        <Box display="grid" gridTemplateColumns="repeat(2, 20)" gap={2}>
-          <Box gridColumn="span 6">
+        <Box display="grid" gridTemplateColumns="repeat(2, 2fr)" gap={2}>
+          <Box
+            gridColumn="span 6"
+            sx={{ display: "grid", gridGap: "20px 20px" }}
+          >
             <ProjectProgressBox />
             <ColorBoxesGrid />
           </Box>
-          <Box gridColumn="span 6">
+          <Box
+            gridColumn="span 6"
+            sx={{ display: "grid", gridGap: "20px 20px" }}
+          >
             <Illustrations />
+            <DevelopmentApproach />
           </Box>
         </Box>
       </Grid>
