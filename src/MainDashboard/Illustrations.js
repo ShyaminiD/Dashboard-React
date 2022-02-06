@@ -1,5 +1,4 @@
 import Grid from "@mui/material/Grid";
-import { ReactComponent as Undrawpostingphoto } from "../img/Undrawpostingphoto.svg";
 
 const illustrationContainer = {
   backgroundColor: "#fff",
@@ -44,17 +43,15 @@ export default function Illustrations() {
       <div lg={12} style={illustrationHeader}>
         <p style={illustrationName}>Earnings Overview</p>
       </div>
-      <div lg={12}>
-        <Undrawpostingphoto style={undrawPhoto} />
-      </div>
+
       <p style={illustrationPara}>
         Add some quality, svg illustrations to your project courtesy of
         <span>
-           <a href="https://undraw.co/" target="_blank">
-             unDraw 
+          <a href="https://undraw.co/" target="_blank">
+            unDraw
           </a>
         </span>
-         a constantly updated collection of beautiful svg images that you can use
+        a constantly updated collection of beautiful svg images that you can use
         completely free and without attribution!
       </p>
       <a href="https://undraw.co/" target="_blank" style={astyles}>

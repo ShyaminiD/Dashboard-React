@@ -9,6 +9,10 @@ import BuildIcon from "@mui/icons-material/Build";
 import FolderIcon from "@mui/icons-material/Folder";
 import BarChartIcon from "@mui/icons-material/BarChart";
 import TableChartIcon from "@mui/icons-material/TableChart";
+import MenuItem from "@mui/material/MenuItem";
+import Menu from "@mui/material/Menu";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import MainDashboard from "../MainDashboard/MainDashboard";
@@ -108,7 +112,6 @@ export function Sidebar() {
   const sideBarStyles = {
     width: setWidth,
     backgroundColor: "#4e73df",
-    height: "100vh",
   };
   const sidebaremojiStyles = {
     display: "flex",
@@ -116,12 +119,11 @@ export function Sidebar() {
     paddingTop: "10px",
     paddingBottom: "10px",
     justifyContent: "space-evenly",
-    borderBottom: "1px solid red",
+    borderBottom: "1px solid grey",
   };
   const sidebarSubmenu1 = {
-    padding: "5px",
-    paddingLeft: "0px",
-    borderBottom: "1px solid red",
+    padding: "8px 8px 8px 0px",
+    borderBottom: "1px solid grey",
   };
   const iconButtonStyle = {
     padding: "0px",
@@ -146,7 +148,8 @@ export function Sidebar() {
     fontWeight: "bold",
     padding: "0px",
   };
-
+  const [openMenu, setopenMenu] = useState(false);
+  console.log("openMenu value", openMenu);
   return (
     <Router>
       <div style={sideBarStyles}>
@@ -175,21 +178,53 @@ export function Sidebar() {
             </div>
           </Link>
 
-          {/* <ul className="sidebarList">
-            <li className="sidebarList-row">
-              {sideBarcomponents.map((m) => (
-                <SidemenuOptions
-                  ptitle={m.title}
-                  picon={m.icon}
-                  parrow={m.arrow}
-                  plink={m.link}
-                  pline={m.line}
-                  psubheading={m.subheading}
-                />
-              ))}
-            </li>
-          </ul>
-          <div class="line"></div> */}
+          <div>
+            <IconButton
+              onClick={() => setopenMenu(true)}
+              style={iconButtonStyle}
+            >
+              <div style={iconButtonStyle1}>
+                <SpeedIcon />
+              </div>
+              <div style={iconButtonStyle2}>Components</div>
+
+              <div>
+                {openMenu == true ? (
+                  <KeyboardArrowDownIcon
+                    style={{ color: "#9f9fb4", transform: "scale(0.4)" }}
+                  />
+                ) : (
+                  <ArrowForwardIosIcon
+                    style={{ color: "#9f9fb4", transform: "scale(0.4)" }}
+                  />
+                )}
+              </div>
+            </IconButton>
+            {openMenu == true ? (
+              <Menu
+                open={openMenu}
+                anchorOrigin={{
+                  vertical: "center",
+                  horizontal: "left",
+                }}
+              >
+                <p
+                  style={{
+                    fontSize: "10px",
+                    fontWeight: "bold",
+                    padding: "3px",
+                  }}
+                >
+                  {" "}
+                  BASIC COMPONENTS
+                </p>
+                <MenuItem>Buttons</MenuItem>
+                <MenuItem>Cards</MenuItem>
+              </Menu>
+            ) : (
+              ""
+            )}
+          </div>
 
           <div className="navigating-arrow">
             <IconButton
