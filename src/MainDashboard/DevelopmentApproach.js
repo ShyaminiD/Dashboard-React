@@ -13,13 +13,7 @@ const developmentHeader = {
   flexDirection: "row",
   justifyContent: "space-between",
 };
-const developmentName = {
-  color: "#4e73df",
-  fontWeight: "600",
-  fontSize: "14px",
-  padding: "10px",
-  marginBottom: "0px",
-};
+
 const developmentPara = {
   fontFamily: "Nunito",
   fontWeight: "400",

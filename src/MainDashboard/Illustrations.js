@@ -43,14 +43,14 @@ export default function Illustrations() {
       <p style={illustrationPara}>
         Add some quality, svg illustrations to your project courtesy of
         <span>
-          <a href="https://undraw.co/" target="_blank">
+          <a href="https://undraw.co/" target="_blank" rel="noreferrer">
             unDraw
           </a>
         </span>
         a constantly updated collection of beautiful svg images that you can use
         completely free and without attribution!
       </p>
-      <a href="https://undraw.co/" target="_blank" style={astyles}>
+      <a href="https://undraw.co/" target="_blank" rel="noreferrer" style={astyles}>
         Browse Illustrations on unDraw →
       </a>
     </Grid>
