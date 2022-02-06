@@ -56,55 +56,6 @@ const sideBarcomponents = [
     subheading: "",
   },
 ];
-//SidemenuOptions component
-function SidemenuOptions({ ptitle, picon, parrow, plink, pline, psubheading }) {
-  console.log(sideBarcomponents);
-  return (
-    <div className="sidebar-menu">
-      <div
-        style={{
-          fontSize: "6px",
-          color: "#9f9fb4",
-          fontWeight: "bold",
-          paddingTop: "12px",
-          fontWeight: "500",
-        }}
-      >
-        {psubheading}
-      </div>
-
-      <div className="sidebar-submenu">
-        <div className="sidebar-submenu1">
-          <Link to={plink}>
-            <IconButton style={{ color: "#9f9fb4", transform: "scale(0.6)" }}>
-              {picon}
-            </IconButton>
-
-            <IconButton
-              style={{
-                color: "white",
-                fontSize: "10px",
-                fontWeight: "bold",
-                padding: "0px",
-              }}
-            >
-              {ptitle}
-            </IconButton>
-          </Link>
-        </div>
-
-        <div className="arrow">
-          <IconButton style={{ color: "#9f9fb4", transform: "scale(0.4)" }}>
-            {parrow}
-          </IconButton>
-        </div>
-      </div>
-    </div>
-    // end of SidemenuOptions menu
-  );
-}
-
-// end of sidebar menu
 
 export function Sidebar() {
   const [setWidth, setWidthSidebar] = useState(180);
@@ -138,7 +89,7 @@ export function Sidebar() {
     transform: "scale(0.6)",
     alignItems: "center",
     display: "flex",
-    alignItems: "center",
+
     justifyContent: "center",
   };
 
@@ -189,7 +140,7 @@ export function Sidebar() {
               <div style={iconButtonStyle2}>Components</div>
 
               <div>
-                {openMenu == true ? (
+                {openMenu === true ? (
                   <KeyboardArrowDownIcon
                     style={{ color: "#9f9fb4", transform: "scale(0.4)" }}
                   />
@@ -200,7 +151,7 @@ export function Sidebar() {
                 )}
               </div>
             </IconButton>
-            {openMenu == true ? (
+            {openMenu === true ? (
               <Menu
                 open={openMenu}
                 anchorOrigin={{
