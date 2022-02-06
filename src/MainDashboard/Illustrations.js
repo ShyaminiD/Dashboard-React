@@ -29,10 +29,6 @@ const illustrationPara = {
   marginBottom: "0px",
 };
 
-const undrawPhoto = {
-  width: "400px",
-  height: "200px",
-};
 const astyles = {
   padding: "10px",
   textDecoration: "none",
