@@ -43,7 +43,7 @@ export default function Illustrations() {
       <p style={illustrationPara}>
         Add some quality, svg illustrations to your project courtesy of
         <span>
-          <a href="https://undraw.co/" target="_blank" rel="noreferrer">
+          <a href="https://undraw.co/" target="_blank" rel="noreferrer" >
             unDraw
           </a>
         </span>
