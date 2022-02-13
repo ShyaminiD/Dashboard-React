@@ -1,5 +1,4 @@
 import Grid from "@mui/material/Grid";
-// import Undrawpostingphoto from "./src/img/Undrawpostingphoto.svg"
 import Undrawpostingphoto from "../img/Undrawpostingphoto.svg";
 const illustrationContainer = {
   backgroundColor: "#fff",
