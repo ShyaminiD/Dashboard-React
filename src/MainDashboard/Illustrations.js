@@ -1,5 +1,6 @@
 import Grid from "@mui/material/Grid";
-
+// import Undrawpostingphoto from "./src/img/Undrawpostingphoto.svg"
+import Undrawpostingphoto from "../img/Undrawpostingphoto.svg";
 const illustrationContainer = {
   backgroundColor: "#fff",
   borderRadius: "5px",
@@ -28,7 +29,13 @@ const illustrationPara = {
   padding: "10px",
   marginBottom: "0px",
 };
-
+const undrawPhoto = {
+  width: "400px",
+  height: "200px",
+  marginLeft: "auto",
+  marginRight: "auto",
+  display:"block",
+};
 const astyles = {
   padding: "10px",
   textDecoration: "none",
@@ -40,17 +47,24 @@ export default function Illustrations() {
         <p style={illustrationName}>Earnings Overview</p>
       </div>
 
+      <img src={Undrawpostingphoto} style={undrawPhoto}></img>
+
       <p style={illustrationPara}>
         Add some quality, svg illustrations to your project courtesy of
         <span>
-          <a href="https://undraw.co/" target="_blank" rel="noreferrer" >
+          <a href="https://undraw.co/" target="_blank" rel="noreferrer">
             unDraw
           </a>
         </span>
         a constantly updated collection of beautiful svg images that you can use
         completely free and without attribution!
       </p>
-      <a href="https://undraw.co/" target="_blank" rel="noreferrer" style={astyles}>
+      <a
+        href="https://undraw.co/"
+        target="_blank"
+        rel="noreferrer"
+        style={astyles}
+      >
         Browse Illustrations on unDraw →
       </a>
     </Grid>

@@ -18,6 +18,7 @@ export function Sidebar() {
   const sideBarStyles = {
     width: setWidth,
     backgroundColor: "#4e73df",
+    minHeight: "100vh",
   };
   const sidebaremojiStyles = {
     display: "flex",
