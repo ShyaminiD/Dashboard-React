@@ -33,7 +33,7 @@ const undrawPhoto = {
   height: "200px",
   marginLeft: "auto",
   marginRight: "auto",
-  display:"block",
+  display: "block",
 };
 const astyles = {
   padding: "10px",
@@ -46,7 +46,11 @@ export default function Illustrations() {
         <p style={illustrationName}>Earnings Overview</p>
       </div>
 
-      <img src={Undrawpostingphoto} style={undrawPhoto}></img>
+      <img
+        src={Undrawpostingphoto}
+        style={undrawPhoto}
+        alt="resposive graphics image"
+      ></img>
 
       <p style={illustrationPara}>
         Add some quality, svg illustrations to your project courtesy of
