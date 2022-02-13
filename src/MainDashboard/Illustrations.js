@@ -49,7 +49,7 @@ export default function Illustrations() {
       <img
         src={Undrawpostingphoto}
         style={undrawPhoto}
-        alt="resposive graphics image"
+        alt="resposive graphics"
       ></img>
 
       <p style={illustrationPara}>
