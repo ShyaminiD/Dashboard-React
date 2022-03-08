@@ -110,7 +110,7 @@ const maincontainer = {
 };
 export default function ProjectProgressBox() {
   return (
-    <Grid lg={6} xs={12} style={maincontainer}>
+    <Grid lg={6.5} xs={12} style={maincontainer}>
    
         <div lg={12} style={progressCardDiv}>
           <p style={progressCard}>Projects</p>

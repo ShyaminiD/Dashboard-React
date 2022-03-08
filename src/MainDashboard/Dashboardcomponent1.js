@@ -121,11 +121,10 @@ export function Stats({ v1, v2, v3, v4, tcolor }) {
     </Grid>
   );
 }
-
 export function Dashboardcomponent1() {
   return (
     <div>
-      <div style={{ margin: "10px" }}>
+      <div style={{ margin: "10px",}}>
         <h4>Dashboard</h4>
       </div>
 
@@ -141,22 +140,12 @@ export function Dashboardcomponent1() {
         ))}
         <Linechart />
         <DoughnutChart />
-        <Box display="grid" gridTemplateColumns="repeat(2, 2fr)" gap={2}>
-          <Box
-            gridColumn="span 6"
-            sx={{ display: "grid", gridGap: "20px 20px" }}
-          >
-            <ProjectProgressBox />
-            <ColorBoxesGrid />
-          </Box>
-          <Box
-            gridColumn="span 6"
-            sx={{ display: "grid", gridGap: "20px 20px" }}
-          >
-            <Illustrations />
-            <DevelopmentApproach />
-          </Box>
-        </Box>
+
+        <ProjectProgressBox />
+        <ColorBoxesGrid />
+
+        <Illustrations />
+        <DevelopmentApproach />
       </Grid>
       {/* //Grid Container   */}
     </div>

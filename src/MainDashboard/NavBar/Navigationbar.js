@@ -40,6 +40,7 @@ const useStyles = makeStyles({
 export function Navigationbar() {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = useState(null);
+  console.log("anchor", anchorEl);
 
   const isMenuOpen = Boolean(anchorEl);
   console.log("ismenuopen", isMenuOpen);

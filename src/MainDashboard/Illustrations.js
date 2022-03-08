@@ -4,6 +4,7 @@ const illustrationContainer = {
   backgroundColor: "#fff",
   borderRadius: "5px",
   overflow: "hidden",
+  paddingBottom: "10px",
 };
 const illustrationHeader = {
   backgroundColor: "#f8f9fc",
@@ -28,16 +29,19 @@ const illustrationPara = {
   padding: "10px",
   marginBottom: "0px",
 };
+
 const undrawPhoto = {
-  width: "400px",
-  height: "200px",
+  width: "60%",
+  paddingBottom: "16px",
   marginLeft: "auto",
   marginRight: "auto",
   display: "block",
 };
+
 const astyles = {
   padding: "10px",
   textDecoration: "none",
+  fontSize: "14px",
 };
 export default function Illustrations() {
   return (
@@ -47,6 +51,8 @@ export default function Illustrations() {
       </div>
 
       <img
+        xs={12}
+        lg={6}
         src={Undrawpostingphoto}
         style={undrawPhoto}
         alt="resposive graphics"
@@ -62,6 +68,7 @@ export default function Illustrations() {
         a constantly updated collection of beautiful svg images that you can use
         completely free and without attribution!
       </p>
+
       <a
         href="https://undraw.co/"
         target="_blank"

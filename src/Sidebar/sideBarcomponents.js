@@ -8,9 +8,11 @@ import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+
 import { MainDashboard } from "../MainDashboard/MainDashboard";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Link, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+import { Navigationbar } from "../MainDashboard/NavBar/Navigationbar";
 
 export function Sidebar() {
   const [setWidth, setWidthSidebar] = useState(180);
@@ -54,8 +56,13 @@ export function Sidebar() {
     fontWeight: "bold",
     padding: "0px",
   };
-  const [openMenu, setopenMenu] = useState(false);
-  console.log("openMenu value", openMenu);
+
+  const [anchorEl, setAnchorEl] = useState(null);
+  console.log(anchorEl);
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+  };
+
   return (
     <Router>
       <div style={sideBarStyles}>
@@ -86,7 +93,7 @@ export function Sidebar() {
 
           <div>
             <IconButton
-              onClick={() => setopenMenu(true)}
+              onClick={() => setAnchorEl(true)}
               style={iconButtonStyle}
             >
               <div style={iconButtonStyle1}>
@@ -95,7 +102,7 @@ export function Sidebar() {
               <div style={iconButtonStyle2}>Components</div>
 
               <div>
-                {openMenu === true ? (
+                {anchorEl === true ? (
                   <KeyboardArrowDownIcon
                     style={{ color: "#9f9fb4", transform: "scale(0.4)" }}
                   />
@@ -106,30 +113,21 @@ export function Sidebar() {
                 )}
               </div>
             </IconButton>
-            {openMenu === true ? (
-              <Menu
-                open={openMenu}
-                anchorOrigin={{
-                  vertical: "center",
-                  horizontal: "left",
-                }}
-              >
-                <p
-                  style={{
-                    fontSize: "10px",
-                    fontWeight: "bold",
-                    padding: "3px",
-                  }}
-                >
-                  {" "}
-                  BASIC COMPONENTS
-                </p>
-                <MenuItem>Buttons</MenuItem>
-                <MenuItem>Cards</MenuItem>
-              </Menu>
-            ) : (
-              ""
-            )}
+
+            <Menu
+              id="simple-menu"
+              anchorEl={anchorEl}
+              keepMounted
+              open={Boolean(anchorEl)}
+              onClose={handleMenuClose}
+              getContentAnchorEl={null}
+              anchorOrigin={{ vertical: "top", horizontal: "right" }}
+              transformOrigin={{ vertical: "bottom", horizontal: "bottom" }}
+            >
+              <MenuItem onClick={handleMenuClose}>Edit</MenuItem>
+              <MenuItem onClick={handleMenuClose}>Save</MenuItem>
+              <MenuItem onClick={handleMenuClose}>Delete</MenuItem>
+            </Menu>
           </div>
 
           <div className="navigating-arrow">
@@ -151,6 +149,7 @@ export function Sidebar() {
           </div>
         </div>
       </div>
+
       <Switch>
         <Route path="/dashboard">
           <MainDashboard />
